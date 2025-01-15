@@ -2,7 +2,7 @@ package p1;
 
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 
 	private int empCode;
 	private String name;
@@ -85,12 +85,15 @@ public class Employee {
 		else return false;
 	}
 	
-	
-	
+	@Override
+	public int compareTo(Employee e) {
+		
+		return this.empCode - e.empCode;
+	}
 	@Override
 	public String toString() {
 		
-		return this.empCode+"-"+this.name;
+		return this.empCode+"-"+this.name+" -  "+this.designation+" - "+this.salary;
 	}
 
 	
