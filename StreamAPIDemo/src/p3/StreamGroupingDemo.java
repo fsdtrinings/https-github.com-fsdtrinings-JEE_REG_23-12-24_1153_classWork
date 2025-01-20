@@ -60,5 +60,15 @@ public class StreamGroupingDemo {
 		System.out.println(map2);
 		
 		
+		/**
+		 * README : Documentation
+		 * https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html
+		 * 
+		 * https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html
+		 * 
+		 * https://dzone.com/articles/grouping-and-aggregations-with-java-streams
+		 * 
+		 * */
+		
 	}
 }

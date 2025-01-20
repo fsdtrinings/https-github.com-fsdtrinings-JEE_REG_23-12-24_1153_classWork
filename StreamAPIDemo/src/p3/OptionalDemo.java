@@ -4,7 +4,8 @@ import java.util.Optional;
 
 public class OptionalDemo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		Optional<String> optional1 = Optional.of("Hello");
 		Optional<String> optional2 = Optional.ofNullable(null);
 		Optional<String> optional3 = Optional.empty();
