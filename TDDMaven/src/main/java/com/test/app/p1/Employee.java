@@ -10,6 +10,8 @@ public class Employee {
 	private String designation = "Not Set";
 	private String projectName = "Not Set";
 	
+	private TimeSheet ts;
+	
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -28,7 +30,15 @@ public class Employee {
 		this.name = name;
 		this.salary = salary;
 	}
-	
+	public Employee(int empCode, String name, int salary, String designation, String projectName, TimeSheet ts) {
+		super();
+		this.empCode = empCode;
+		this.name = name;
+		this.salary = salary;
+		this.designation = designation;
+		this.projectName = projectName;
+		this.ts = ts;
+	}
 	public int getEmpCode() {
 		return empCode;
 	}
@@ -59,14 +69,15 @@ public class Employee {
 	public void setProjectName(String projectName) {
 		this.projectName = projectName;
 	}
-	@Override
-	public String toString() {
-		
-		return this.empCode+"-"+this.name+" , "+this.designation+" , "+this.projectName+" "+this.salary;
+	public TimeSheet getTs() {
+		return ts;
+	}
+	public void setTs(TimeSheet ts) {
+		this.ts = ts;
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(designation, empCode, name, projectName, salary);
+		return Objects.hash(designation, empCode, name, projectName, salary, ts);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -79,11 +90,16 @@ public class Employee {
 		Employee other = (Employee) obj;
 		return Objects.equals(designation, other.designation) && empCode == other.empCode
 				&& Objects.equals(name, other.name) && Objects.equals(projectName, other.projectName)
-				&& salary == other.salary;
+				&& salary == other.salary && Objects.equals(ts, other.ts);
+	}
+	@Override
+	public String toString() {
+		return "Employee [empCode=" + empCode + ", name=" + name + ", salary=" + salary + ", designation=" + designation
+				+ ", projectName=" + projectName + ", ts=" + ts + "]";
 	}
 	
-
 	
+	 	
 	
 
 }
